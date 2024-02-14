@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
   let currentValue = "";
 
   function evaluateResult() {
-    let result = eval(currentValue);
-    let convertValue = convertValue()
+    const convertValue = currentValue.replace("×", "*").replace("÷", "/");
+    const result = eval(convertValue);
     displayScreen.value = result;
 
   }
